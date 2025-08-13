@@ -14,12 +14,12 @@ function add() { //função que irá adicionar a nova tarefa
 function render() { //função para renderizar as tarefas inciais 
     const ul = document.querySelector("ul") //cria uma const "ul" que armazena a ul
     ul.innerHTML = "" //limpa o valor da ul
-    tarefas.forEach(function(tarefa){
-        const li = document.createElement("li")
-    li.innerText = tarefa
-    ul.appendChild(li)                  
+    tarefas.forEach(function(tarefa){ //passa tarefa por tarefa através do forEach
+        const li = document.createElement("li") //a const "li" cria um novo elemento li
+    li.innerText = tarefa //altera o texto do novo li para ser igual ao tarefa do for each
+    ul.appendChild(li) //entra na ul e adiciona um novo filho                  
     })          
     }
-    
+
  //iniciar
-render()
+render() //chama o render ao abrir a página
